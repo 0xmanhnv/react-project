@@ -11,3 +11,6 @@ app.listen(3000);
 app.get("/", function(req, res) {
 	res.render("home");
 });
+app.get("/search", function(req, res) {
+	res.render("search");
+});

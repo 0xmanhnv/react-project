@@ -1,0 +1,40 @@
+.main-page
+  // begin home search
+  .home-search
+    .container
+      h1 Search over 3 billion phone numbers.
+      .searchbar
+        .searchbar-inputs
+          .searchbar-country
+            select
+              option Chọn
+              option(value='VN ( + 84 )') Việt Nam (+84 )
+          input.searchbar-query(type='phone-number', name='', placeholder='Search number...')
+          button.searchbar-submit
+            i.fa.fa-search(aria-hidden='true')
+      .top-spammer
+        div Top reported spam number in your area right now:
+        div
+          a(href='/search/vn/+84873001988') 08 7300 1988
+  // end home search
+  // begin home-download
+  .home-download
+    .container
+      .col-xs-12.col-sm-12.col-md-6.col-lg-6
+        .home-download-text
+          h3.home-download-title Get Truecaller on your phone
+          p.home-download-copy The best caller ID and block for all your calls and SMS.
+        // <div class="row">
+        .col-xs-12.col-sm-12.col-md-6.col-lg-6
+          a.btn.btn-success(href='#') DOWNLOAD NOW
+        .col-xs-12.col-sm-12.col-md-6.col-lg-6
+          a.btn.btn-black(href='#')
+            | KNOW MORE 
+            i.fa.fa-play-circle(aria-hidden='true')
+        // </div>
+      .col-xs-12.col-sm-12.col-md-6.col-lg-6
+        // <div class="picture-spacer" style="padding-top: 207.143%;"></div>
+        picture.picture.home-download-image
+          source(src='images/home-phone-android.png', type='image/webp')
+          img(src='images/home-phone-android.png')
+  // end home down-load

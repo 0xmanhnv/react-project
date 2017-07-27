@@ -298,18 +298,11 @@ header {
 			.picture-spacer {
 			    position: relative;
 			}
-			/*.picture img {
-			    position: absolute;
-			    top: 0;
-			    left: 0;
-			    bottom: 0;
-			    right: 0;
-			}*/
+			
 			.picture  img {
 				max-width: 100%;
 				min-width: 100%;
 			}
-
 
 /*...............................*/
 
