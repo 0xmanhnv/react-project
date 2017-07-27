@@ -1,0 +1,259 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	
+}
+
+header {
+
+}
+#button-nav {
+	display: block;
+	float: left;
+	margin: 0px;
+	border-radius: 0px;
+	line-height: 100%;
+
+	box-sizing: border-box;
+}
+	#button-nav span{
+		background-color: #fff;
+	}
+#main-menu {
+	
+}
+	#main-menu .navbar-header {
+		/*padding: 10px 0px 0px 0px;*/
+		/*min-height: 72px;*/
+	}
+		#main-menu .navbar-header .navbar-brand {
+			height: 100%;
+			font-family: 'EB Garamond';
+			font-weight: bold;
+			padding: 0px;
+			font-size: 270%;
+		}
+.navbar{
+	margin-bottom: 0px;
+	border-radius: 0px;
+
+}
+.navbar-default {
+	background: #0086fe;
+	/*border-color: #0086fe;*/
+	border-top-color: #0086fe;
+	border-right-color: #0086fe;
+	border-left-color: #0086fe;
+}
+	.navbar-default .navbar-brand {
+		color: #fff;
+	}
+	.navbar-default .navbar-brand:hover {
+		color: #fff;
+	}
+	.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+	    background-color: #0472d4;
+	}
+
+/*/* di chuyển nav-brand ra căn giữa menu**/
+.navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+	.navbar-brand {
+		float:none;
+		padding-bottom: 0px;
+		width: 100%;
+		text-align: center;
+	    margin:0 auto;
+	}
+	
+/* ......................................... */
+
+
+/* cấu hình menu thu vào */   
+.nav-side-menu {
+	width: 0px;
+ 	height: 100%;
+
+ 	overflow: hidden;
+ 	font-family: verdana;
+ 	font-size: 12px;
+ 	font-weight: 200;
+ 	background-color: #2e353d;
+ 	position: fixed;
+ 	top: 0px;
+  	left: 0px;
+  	z-index: 1000;
+ 	color: #e1ffff;
+ 	transition: 0.5s;
+  /*display: none;*/
+}
+
+.nav-side-menu .navbar-brand {
+  background-color: #23282e;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  padding: 0px;
+}
+.nav-side-menu .toggle-btn {
+  display: none;
+}
+.nav-side-menu ul,
+.nav-side-menu li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  line-height: 35px;
+  cursor: pointer;
+
+}
+/*...........................*/
+
+/* phần cáu hình của main - page */
+.main-page {
+
+}
+	.home-search {
+		background: #0086fe;
+	    height: calc(100vh - 54px);
+	    max-height: 528px;
+	    color: #fff;
+	    text-align: center;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-box-orient: vertical;
+	    -webkit-box-direction: normal;
+	    -ms-flex-flow: column;
+	    flex-flow: column;
+	    -webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	    justify-content: center;
+	    width: 100%;
+	}
+		.home-search h1 {
+		    color: #fff;
+		    margin-bottom: 2rem;
+		}
+			.searchbar {
+			    position: relative;
+			    width: 100%;
+			    max-width: 492px;
+			    margin: auto;
+			    z-index: 50;
+			}
+				.searchbar-inputs {
+				    position: relative;
+				    z-index: 51;
+				    background: #fff;
+				    display: -webkit-box;
+				    display: -ms-flexbox;
+				    display: flex;
+				    -webkit-box-align: center;
+				    -ms-flex-align: center;
+				    align-items: center;
+				    border-radius: 4px;
+				    height: 60px;
+				}
+					.searchbar-country {
+					    position: relative;
+					    text-align: center;
+					    color: #0086fe;
+					    padding: 0;
+					    font-weight: 700;
+					    line-height: 3.75rem;
+					    width: 96px;
+					    -webkit-box-flex: 0;
+					    -ms-flex: 0 0 96px;
+					    flex: 0 0 96px;
+					    white-space: nowrap;
+					    overflow: hidden;
+					    text-overflow: ellipsis;
+					}
+					.searchbar-country:before {
+					    content: "";
+					    width: 0;
+					    height: 0;
+					    position: absolute;
+					    right: 10px;
+					    top: 50%;
+					    margin-top: -2px;
+					    border-left: 4px solid transparent;
+					    border-right: 4px solid transparent;
+					    border-top: 4px solid #0086fe;
+					}
+						.searchbar-country select {
+						    position: absolute;
+						    opacity: 0;
+						    height: 100%;
+						    left: 0;
+						    top: 0;
+						}
+					input.searchbar-query {
+					    padding-left: 0;
+					    padding-right: 0;
+					    font-family: Open Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+					}
+
+					.searchbar-submit {
+					    width: 72px;
+					    -webkit-box-flex: 0;
+					    -ms-flex: 0 0 72px;
+					    flex: 0 0 72px;
+					    height: 40px;
+					    background-image: url(data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" xml…transform="rotate(-45 18.818 18.818)"/><path d="M0 0H24V24H0z"/></g></svg>);
+					    background-position: 50%;
+					    background-repeat: no-repeat;
+					    background-color: transparent;
+					    border-color: transparent;
+					    color: gray;
+					}
+					
+/*...............................*/
+
+/* một số thẻ mặc định */
+    h1 {
+    	/*font-size: 2.5rem;*/
+	    line-height: 3rem;
+	    margin-bottom: 2rem;
+	    letter-spacing: -.040625rem;
+
+	    font-family: Montserrat,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+	    font-weight: 700;
+    }
+    input {
+    	border: 0;
+	    border-radius: 0;
+	    -webkit-appearance: none;
+	    -moz-appearance: none;
+	    appearance: none;
+	    background-color: transparent;
+	    display: block;
+	    width: 100%;
+	    /*font-size: 1rem;*/
+	     padding: .5rem 1rem; 
+	    /*line-height: 2rem;*/
+	    color: gray;
+    }
+
+    button {
+	    width: auto;
+	    display: inline-block;
+	    height: 36px;
+	    line-height: 36px;
+	    cursor: pointer;
+	    padding: 0 16px;
+	    text-transform: uppercase;
+	    text-align: center;
+	    border-radius: 2px;
+	    font-weight: 700;
+	}
+/*.......................*/
