@@ -1,19 +1,9 @@
-doctype html
-html(lang='en')
-  head
-    include includes/head.pug
-  body
-    // begin header
-    header
-      include includes/menu.pug
-    // end header
-    
-    // begin main content
-    content
-      include includes/main-page.pug
-    // end main content
+extends base
 
-    // begin footer
-    footer
-      include includes/foot.pug
-    // end footer
+
+block content
+  p chưa có gì
+
+prepend content
+  p thêm cái gì đó vào
+  

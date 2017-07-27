@@ -1,19 +1,3 @@
-doctype html
-html(lang='en')
-  head
-    include includes/head.pug
-  body
-    // begin header
-    header
-      include includes/menu.pug
-    // end header
-
-    // begin main content
-    content
-      include includes/main-page.pug
-    // end main content
-
-    // begin footer
-    footer
-      include includes/foot.pug
-    // end footer
+extends base
+block content
+  include includes/main-page.pug

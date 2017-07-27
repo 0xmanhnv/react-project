@@ -5,7 +5,7 @@ var app = express();
 app.use(express.static("public"));
 app.set("view engine","pug");
 app.set("views", "./views");
-app.listen(3000);
+app.listen(1234);
 
 
 app.get("/", function(req, res) {
