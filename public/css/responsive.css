@@ -8,6 +8,19 @@
 	    font-size: 14px;
 	    line-height: 21px;
 	}
+
+	.footer-links {
+		display: none;
+	}
+
+	.footer-top .footer-social {
+	    max-width: 300px;
+	    margin: auto;
+	    -webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	    justify-content: center;
+	}
+
 }
 /*Tablet nhỏ(480 x 640)*/
 @media screen and (max-width: 480px){
