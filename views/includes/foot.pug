@@ -1,48 +1,73 @@
-#footer
-  .footer-container.container
-    .footer-top
-      .row
-        .col-xs-12.col-sm-12.col-md-3.col-lg-3
-          .footer-links
-            h4 Product
-            a(href='/truecaller') Get the app
-            a(href='https://support.truecaller.com', target='_blank', rel='noopener') Support
-        .col-xs-12.col-sm-12.col-md-3.col-lg-3
-          .footer-links
-            h4 Product
-            a(href='/truecaller') Get the app
-            a(href='https://support.truecaller.com', target='_blank', rel='noopener') Support
-        .col-xs-12.col-sm-12.col-md-3.col-lg-3
-          .footer-links
-            h4 Product
-            a(href='/truecaller') Get the app
-            a(href='https://support.truecaller.com', target='_blank', rel='noopener') Support
-        .col-xs-12.col-sm-12.col-md-3.col-lg-3
-          .footer-social
-            .icon-social
-              a(href='#')
-                i.fa.fa-facebook(aria-hidden='true')
-            .icon-social
-              a(href='#')
-                i.fa.fa-facebook(aria-hidden='true')
-            .icon-social
-              a(href='#')
-                i.fa.fa-facebook(aria-hidden='true')
-            .icon-social
-              a(href='#')
-                i.fa.fa-facebook(aria-hidden='true')
-    .footer-bottom
-      .row
-        .col-xs-12.col-sm-12.col-md-4.col-lg-4
-          .footer-logo.text-center
-            a.navbar-brand(href='#') Nguyễn Mạnh
-        .col-xs-12.col-sm-12.col-md-8.col-lg-8
-          .footer-legal
-            span
-              | Copyright © 2009-2017 True Software Scandinavia AB. All rights reserved. Truecaller™ is a registered trademark. Responsible publisher: Alan Mamedi appointed by True Software Scandinavia AB. Database name: Truecaller.com
-              br
-              a(href='/terms-of-service') Terms of service
-              |  
-              a(href='/privacy-policy', privacy='', policy<='', a='')
-                | 
-                a(href='/cookie-policy') Cookie policy
+#footer-widgets
+  .container
+    .row.inner-wrapper
+      .col-sm-6.col-md-3
+        .footer-widget-area
+          h3.widget-title About Us
+          .text-widget
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            | quis nostrud exercitation ullamco
+      .col-sm-6.col-md-3
+        .footer-widget-area
+          h3.widget-title Product
+          .widget-links-container
+            ul.widget-links
+              li
+                a(href='#') Get the app
+              li
+                a(href='#') Support
+      .col-sm-6.col-md-3
+        .footer-widget-area
+          h3.widget-title Service
+          .widget-links-container
+            ul.widget-links
+              li
+                a(href='#') Developers
+              li
+                a(href='#') Advertise
+      .col-sm-6.col-md-3
+        .footer-widget-area.social-links-footer
+          h3.widget-title Social links
+          .widget-socials-links
+            ul.menu-social-links
+              li
+                a(href='#')
+                  i.fa.fa-facebook(aria-hidden='true')
+              li
+                a(href='#')
+                  i.fa.fa-youtube(aria-hidden='true')
+              li
+                a(href='#')
+                  i.fa.fa-twitter(aria-hidden='true')
+              li
+                a(href='#')
+                  i.fa.fa-instagram(aria-hidden='true')
+// end footer widgets
+// begin footer-bottom
+#footer-bottom
+  .container
+    .row.footer-bottom-inner
+      .col-md-6
+        .footer-bottom-col
+          p.copyright
+            | Copyright © 2017 
+            a(href='#') Nguyễn Mạnh
+            | . All rights reserved.
+      .col-md-6
+        .footer-bottom-col
+          .footer-bottom-social
+            ul.menu-social-links
+              li
+                a(href='#')
+                  i.fa.fa-facebook(aria-hidden='true')
+              li
+                a(href='#')
+                  i.fa.fa-youtube(aria-hidden='true')
+              li
+                a(href='#')
+                  i.fa.fa-twitter(aria-hidden='true')
+              li
+                a(href='#')
+                  i.fa.fa-instagram(aria-hidden='true')
+// end footer-bottom

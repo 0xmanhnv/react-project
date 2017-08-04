@@ -4,23 +4,32 @@
 }
 /*Ipad dọc(768 x 1024)*/
 @media screen and (max-width: 768px){
+
+	
+
    .top-spammer {
 	    font-size: 14px;
 	    line-height: 21px;
 	}
 
-	.footer-links {
+	.footer-widget-area	.widget-title {
+		text-align: center;
+	}
+		#footer-widgets .widget-title::after {
+			width: 0px;
+		}
+	#footer-bottom .footer-bottom-social, .footer-bottom-col {
+		text-align: center;
+	}
+	.footer-widget-area {
+	    width: 100%;
+	    padding-top: 15px;
+	    border-top: 1px solid #fff;
+	    margin-top: 15px;
+	}
+	.social-links-footer {
 		display: none;
 	}
-
-	.footer-top .footer-social {
-	    max-width: 300px;
-	    margin: auto;
-	    -webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	    justify-content: center;
-	}
-
 }
 /*Tablet nhỏ(480 x 640)*/
 @media screen and (max-width: 480px){

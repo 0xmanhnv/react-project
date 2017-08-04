@@ -1,7 +1,7 @@
 const pug = require("pug");
-var express = require("express");
+const express = require("express");
 const path = require('path');
-var app = express();
+const app = express();
 
 app.use(express.static("public"));
 app.set("view engine","pug");

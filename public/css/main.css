@@ -4,30 +4,40 @@
 }
 
 body {
-	
+	color: #7a7a7a;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 header {
 
 }
-#button-nav {
+#btn-drawer-open {
 	display: block;
 	float: left;
 	margin: 0px;
 	border-radius: 0px;
 	line-height: 100%;
-
 	box-sizing: border-box;
 }
-	#button-nav span{
+	#btn-drawer-open span{
 		background-color: #fff;
 	}
+#btn-drawer-close {
+	background-color: rgb(0,0,1);
+	border: 0px;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	font-size: 16px;
+	font-weight: bold;
+}
 #main-menu {
 	
 }
 	#main-menu .navbar-header {
-		/*padding: 10px 0px 0px 0px;*/
-		/*min-height: 72px;*/
+		
 	}
 		#main-menu .navbar-header .navbar-brand {
 			height: 100%;
@@ -76,11 +86,23 @@ header {
 /* ......................................... */
 
 
-/* cấu hình menu thu vào */   
-.nav-side-menu {
-	width: 0px;
+/* cấu hình menu thu vào */
+#overlay-menu {
+	height: 100%;
+	width: 100%;
+	background: black;
+	opacity: 0.4;
+	position: fixed;
+	top: 0px;
+	display: none;
+	z-index: 999;
+} 
+#side-nav-mobile {
+	z-index: 1000;
+}  
+.drawer {
+	width: 250px;
  	height: 100%;
-
  	overflow: hidden;
  	font-family: verdana;
  	font-size: 12px;
@@ -88,33 +110,67 @@ header {
  	background-color: #2e353d;
  	position: fixed;
  	top: 0px;
-  	left: 0px;
+  	left: -250px;
   	z-index: 1000;
  	color: #e1ffff;
  	transition: 0.5s;
-  /*display: none;*/
+ 	-webkit-transition: 0.5s;
 }
 
-.nav-side-menu .navbar-brand {
-  background-color: #23282e;
-  line-height: 50px;
-  display: block;
-  text-align: center;
-  font-size: 14px;
-  padding: 0px;
+.drawer .navbar-brand {
+	background-color: #23282e;
+	line-height: 50px;
+	display: block;
+	text-align: center;
+	padding: 0px;
+	font-weight: 600;
+    font-size: 16px;
 }
-.nav-side-menu .toggle-btn {
-  display: none;
-}
-.nav-side-menu ul,
-.nav-side-menu li {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-  line-height: 35px;
-  cursor: pointer;
+	.navbar-default .navbar-brand:hover {
+	    color: #fff;
+	}
+	.drawer .toggle-btn {
+	  display: none;
+	}
+	.drawer ul,
+		.drawer li {
+		  list-style: none;
+		  padding: 0px;
+		  margin: 0px;
+		  line-height: 35px;
+		  cursor: pointer;
 
-}
+		}
+	.drawer-menu {
+
+	}
+		.drawer-menu .drawer-item {
+			position: relative;
+		    display: block;
+		    min-height: 60px;
+		    line-height: 60px;
+		    width: 100%;
+		    padding: 0 24px 0 48px;
+		    cursor: pointer;
+		    color: white;
+		    font-weight: 600;
+		    font-size: 16px;
+		}
+			.drawer-menu .drawer-item:hover {
+				text-decoration: none;
+				background-color: #28313c;
+			}
+			.drawer-item:before {
+			    content: "";
+			    position: absolute;
+			    top: 50%;
+			    left: 24px;
+			    width: 4px;
+			    height: 4px;
+			    margin-top: -2px;
+			    border-radius: 100%;
+			    background: currentColor;
+			}
 /*...........................*/
 
 /* phần cáu hình của main - page */
@@ -254,13 +310,11 @@ header {
 		    -webkit-box-flex: 1;
 		    -ms-flex: 1;
 		    flex: 1;
-		    margin-right: 48px;
 		}
 			.home-download .home-download-title {
 			    font-size: 48px;
 			    line-height: 48px;
 			    letter-spacing: -2px;
-			    max-width: 340px;
 			    margin-top: 0;
 			    margin-bottom: 24px;
 			}
@@ -313,68 +367,100 @@ header {
 
 /*...............................*/
 
-/* footer */
-#footer {
-    background: #06273b;
-    color: #fff;
-    font-size: 12px;
-    line-height: 36px;
+/* footer 2 */
+#footer-widgets {
+	background-color: #00132c;
+    color: #bbbbbb;
+    overflow: hidden;
+    padding: 30px 0;
 }
-	.footer-top {
-	    width: 100%;
-	    display: -webkit-box;
-	    display: -ms-flexbox;
-	    display: flex;
-	    padding: 72px 0 36px;
-	    border-bottom: 1px solid hsla(0,0%,100%,.2);
+	#footer-widgets, #footer-widgets a {
+		color: #dddddd;
 	}
-		.footer-top>div {
-		    -webkit-box-flex: 1;
-		    -ms-flex: 1;
-		    flex: 1;
-		}
-		.footer-top h4 {
-		    font-size: inherit;
-		    margin-bottom: 1rem;
-		}
-		.footer-top a {
+
+	#footer-widgets .widget-title {
+	    color: #ffffff;
+	}
+		#footer-widgets .widget-title::after {
+		    content: "";
 		    display: block;
+		    width: 60px;
+		    height: 2px;
+		    margin-top: 5px;
+		    background: #EE3B24;
+		}
+	#footer-widgets ul {
+	    list-style: none;
+	    margin: 0;
+	}
+		#footer-widgets ul li {
+		    padding: 3px 0 3px;
+		    position: relative;
+		}
+		#footer-widgets ul.widget-links li::before {
+		    content: "";
+		    font-family: 'FontAwesome';
+		    margin-right: 10px;
+		    height: 6px;
+		    width: 6px;
+		    background: #EE3B24;
+		    display: inline-block;
+		    transform: rotate(-45deg);
+		}
+		#footer-widgets .widget-socials-links li {
+		    display: block;
+		    float: left;
+		    margin-right: 5px;
+		    margin-bottom: 5px;
 		}
 
-			.footer-social .icon-social{
-				width: 50px;
-			    height: 50px;
-			    margin-bottom: 10px;
+			#footer-widgets .widget-socials-links li a {
+			    border: 1px solid #bababa;
+			    display: inline-block;
+			    height: 33px;
+			    line-height: 1.7;
+			    margin-right: 0;
+			    padding: 0;
 			    text-align: center;
-			    float: left;
-			    background: white;
-			    border-radius: 50%;
-			    margin-left: 5px;
-			    margin-right: 5px;
+			    vertical-align: middle;
+			    width: 33px;
 			}
-				.footer-social .icon-social a {
-					height: 100%;
-					font-size: 200%;
-					font-weight: bold;
-					position: relative;
-				}
-				.footer-social .icon-social a i {
-					position: absolute;
-					top: 13px;
-				    left: 18px;
-				}
-
-	.footer-bottom {
-	    width: 100%;
-	    color: hsla(0,0%,100%,.6);
-	    padding: 64px 0;
-	    display: -webkit-box;
-	    display: -ms-flexbox;
-	    display: flex;
-	    -webkit-box-align: center;
-	    -ms-flex-align: center;
-	    align-items: center;
+#footer-bottom {
+	background-color: #00132c;
+    clear: both;
+    color: #fff;
+    padding: 15px 0;
+    font-weight: 500;
+    border-top: 1px solid #666;
+}
+	#footer-bottom .footer-bottom-social {
+		text-align: right;
 	}
+		.footer-bottom-social ul {
+			list-style: none;
+			margin: 0px;
+		}
+		.footer-bottom-social ul li {
+			display: inline-block;
+		    float: none;
+		    margin-right: 0;
+	        margin-bottom: 5px;
+		}
+		.footer-bottom-social li a {
+		    /*border: 1px solid #bababa;*/
+		    display: inline-block;
+		    height: 33px;
+		    line-height: 1.7;
+		    margin-right: 0;
+		    padding: 0;
+		    text-align: center;
+		    vertical-align: middle;
+		    width: 33px;
+		}
+		.footer-bottom-social li a i {
+			width: 100%;
+		}
+
 /*...................*/
 
 /* một số thẻ mặc định */
@@ -448,4 +534,9 @@ header {
 		    background-color: #11171a;
 		    color: #fff;
 		}
+h1, h2, h3, h4, h5, h6 {
+	color: #272727;
+	font-family: "PT Sans",sans-serif;
+	font-weight: 500;
+}
 /*.......................*/

@@ -1,15 +1,28 @@
 $(document).ready(function() {   
-    function openNav() {
-    	$('#mySidenav').css({
+    // xử lý draer-menu
+    $('#btn-drawer-open').click(function() {
+        openNav();
+         
+    });
+    $("#btn-drawer-close").click(function() {
+        closeNav();
+    })
 
-    		"width" : "300px";
-    	});
-    }
+    $('#overlay-menu').click(function() {
+        closeNav();
+    });
 
     function closeNav() {
-    	$('#mySidenav').css({
-
-    		"width" : "0px";
-    	});
+        $('#overlay-menu').hide();
+        $('#side-nav-mobile').css({
+            'left': '-250px',
+        });
     }
+    function openNav() {
+        $('#side-nav-mobile').css({
+            'left': '0',
+        });
+        $('#overlay-menu').show();
+    }
+    // end draer-menu
 });
